@@ -10,7 +10,7 @@
 
 <p align="center">
 <a href="https://app.powerbi.com/view?r=eyJrIjoiNGJkZDE4MmItYzE2OC00MGU4LTliNzgtODljZWYyNmIxOWI0IiwidCI6IjkxZTdhZTIzLTdkOGYtNGYwNC1hZDZhLWNkYTgzNTEyZDY1OSJ9" target="_blank">
-🚀 <b>Clique aqui para acessar o Dashboard Interativo</b>
+<b>Clique aqui para acessar o Dashboard Interativo</b>
 </a>
 </p>
 
@@ -21,6 +21,37 @@
 Este projeto integra uma pipeline de dados em Python com um dashboard de Business Intelligence para prever a volatilidade do mercado petroquímico europeu. O foco central é a relação de preços do Poliestireno (PS) entre a Europa e a China, utilizando o Petróleo Brent como o principal driver de custo.
 
 Os dados utilizados são provenientes de fontes públicas e mercados financeiros reais (via Yahoo Finance), coletados exclusivamente para fins de estudo, treinamento e demonstração de competências técnicas em Engenharia de Dados e Machine Learning.
+
+## 💡 Guia de Decisão Estratégica (Manual do Usuário)
+
+Este dashboard foi desenhado para apoiar profissionais de **Suprimentos e Supply Chain** na tomada de decisão. Abaixo, detalhamos como utilizar cada ferramenta para otimizar a compra de insumos:
+
+### 1. Planejamento de Compras (Página 1: Forecast)
+* **O que observar:** A linha de tendência (`yhat`) e as bandas de incerteza do modelo Prophet.
+* **Ação sugerida:** Se o modelo indicar uma tendência de alta para os próximos 30 dias com baixa incerteza, o comprador deve considerar a **antecipação de ordens** para travar o preço atual. Caso a tendência seja de queda, a estratégia recomendada é o *hand-to-mouth* (comprar o mínimo necessário) para capturar preços menores no curto prazo.
+
+### 2. Gestão de Risco e Repasse de Custos (Página 1: Lead-Lag Brent)
+* **O que observar:** A medida de **Sensibilidade Dinâmica**.
+* **Ação sugerida:** Utilize o fator de repasse (ex: 15.5) para prever o impacto de variações no Petróleo Brent sobre o custo do Poliestireno. Se o Brent sobe hoje, o comprador já possui uma estimativa técnica do aumento que sofrerá em ~30 dias, permitindo um planejamento financeiro mais preciso e aviso prévio à diretoria.
+
+### 3. Monitoramento de Sentimento do Mercado (Página 2: Correlação)
+* **O que observar:** O gráfico de dispersão e o coeficiente $R^2$ das petroquímicas (**LYB/WLK**).
+* **Ação sugerida:** O mercado financeiro costuma antecipar movimentos da economia real. Um descolamento (ações caindo enquanto o preço físico sobe) pode indicar uma queda iminente na demanda global, servindo como um alerta para não manter estoques altos de material caro.
+
+### 4. Estratégia de Negociação e Arbitragem (Página 3: Simulador What-if)
+* **O que observar:** O Velocímetro de Arbitragem e o Gráfico de Composição de Preço.
+* **Ação sugerida:** Utilize o simulador para testar cenários de queda no preço chinês. Se o velocímetro entrar na zona de **Arbitragem Positiva**, o comprador ganha um argumento técnico para negociar reduções com fornecedores locais, utilizando o custo de importação da Ásia como um *benchmark* de preço teto.
+
+---
+
+## 🛠️ Glossário Técnico de Unidades
+
+Para garantir a precisão analítica, o projeto utiliza as seguintes padronizações internacionais:
+
+* **Polímeros (PS Europa/China):** Cotados em **USD/t** (Dólares por Tonelada Métrica).
+* **Petróleo (Brent):** Cotado em **USD/bbl** (Dólares por Barril).
+* **Ações (LYB/WLK):** Cotadas em **USD/share** (Dólares por Ação).
+* **Sensibilidade:** Representa a variação em USD na tonelada de PS para cada 1 USD de variação no barril de petróleo.
 
 ## ⚙️ Arquitetura e Automação
 
