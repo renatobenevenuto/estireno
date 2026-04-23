@@ -28,39 +28,26 @@ Este dashboard foi desenhado para apoiar profissionais de **Suprimentos e Supply
 
 ### 1. Planejamento de Compras (Página 1: Forecast)
 * **O que observar:** A linha de tendência (`yhat`) e as bandas de incerteza do modelo Prophet.
-* **Ação sugerida:** Se o modelo indicar uma tendência de alta para os próximos 30 dias com baixa incerteza, o comprador deve considerar a **antecipação de ordens** para travar o preço atual. Caso a tendência seja de queda, a estratégia recomendada é o *hand-to-mouth* (comprar o mínimo necessário) para capturar preços menores no curto prazo.
-  
 * "Compro agora para o mês que vem ou espero os preços caírem?"
+* **Ação sugerida:**  Se a linha de tendência (yhat) mostra uma subida íngreme para os próximos 30 dias e as bandas de incerteza estão estreitas, ele vai antecipar as ordens de compra para travar o preço atual. Se a tendência for de queda, compra-se apenas o estritamente necessário (mínimo de estoque) para aproveitar preços menores no futuro.
   
- Se a linha de tendência (yhat) mostra uma subida íngreme para os próximos 30 dias e as bandas de incerteza estão estreitas, ele vai antecipar as ordens de compra para travar o preço atual. Se a tendência for de queda, ele comprará apenas o estritamente necessário (mínimo de estoque) para aproveitar preços menores no futuro.
 
 ### 2. Gestão de Risco e Repasse de Custos (Página 1: Lead-Lag Brent)
 * **O que observar:** A medida de **Sensibilidade Dinâmica**.
-* **Ação sugerida:** Utilize o fator de repasse (ex: 15.5) para prever o impacto de variações no Petróleo Brent sobre o custo do Poliestireno. Se o Brent sobe hoje, o comprador já possui uma estimativa técnica do aumento que sofrerá em ~30 dias, permitindo um planejamento financeiro mais preciso e aviso prévio à diretoria.
+* * "Qual será o impacto do aumento do barril de ontem no meu custo de produção?"
+* **Ação sugerida:** Como o Brent de hoje dita o preço do PS em 30 dias (Lag), isso é importante para planejar o fluxo de caixa da fábrica. Se o Brent subiu 10 dólares, usa-se um "Fator de Repasse" (ex: 15.5) para já avisar o financeiro que o custo da tonelada vai subir aproximadamente 155 dólares no próximo mês..
 
-* "Qual será o impacto do aumento do barril de ontem no meu custo de produção?"
-
-Observar a Sensibilidade Dinâmica.
-
-Como o Brent de hoje dita o preço do PS em 30 dias (Lag), isso é importante para planejar o fluxo de caixa da fábrica. Se o Brent subiu 10 dólares, usa-se um "Fator de Repasse" (ex: 15.5) para já avisar o financeiro que o custo da tonelada vai subir aproximadamente 155 dólares no próximo mês.
 
 ### 3. Monitoramento de Sentimento do Mercado (Página 2: Correlação)
 * **O que observar:** O gráfico de dispersão e o coeficiente $R^2$ das petroquímicas (**LYB/WLK**).
-* **Ação sugerida:** O mercado financeiro costuma antecipar movimentos da economia real. Um descolamento (ações caindo enquanto o preço físico sobe) pode indicar uma queda iminente na demanda global, servindo como um alerta para não manter estoques altos de material caro.
-
 * "O mercado financeiro está otimista ou pessimista?"
+* **Ação sugerida:** As ações das petroquímicas costumam reagir antes dos preços físicos. Um descolamento (ações caindo enquanto o preço físico sobe) pode indicar uma queda iminente na demanda global e Se o $R^2$ da WLK ou LYB é alto (0.85) e as ações estão caindo há uma semana, sabe-se que a demanda por plásticos está esfriando, e isso em breve chegará ao preço do Estireno. É um sinal de alerta para não estocar material caro.
 
-Observar O Gráfico de Dispersão e o $R^2$.
-
-As ações das petroquímicas costumam reagir antes dos preços físicos. Se o $R^2$ da WLK ou LYB é alto (0.85) e as ações estão caindo há uma semana, sabe-se que a demanda por plásticos está esfriando, e isso em breve chegará ao preço do Estireno. É um sinal de alerta para não estocar material caro.
 
 ### 4. Estratégia de Negociação e Arbitragem (Página 3: Simulador What-if)
 * **O que observar:** O Velocímetro de Arbitragem e o Gráfico de Composição de Preço.
-* **Ação sugerida:** Utilize o simulador para testar cenários de queda no preço chinês. Se o velocímetro entrar na zona de **Arbitragem Positiva**, o comprador ganha um argumento técnico para negociar reduções com fornecedores locais, utilizando o custo de importação da Ásia como um *benchmark* de preço teto.
-
 * "O preço que meu fornecedor europeu está cobrando é justo?"
-
-Pode-se simular uma queda no preço chinês mexendo no slider. Se o velocímetro mostrar que a "Janela de Importação" abriu (arbitragem positiva), há um argumento técnico fortíssimo para sentar com o fornecedor local e dizer: "O diferencial Europa-China está em 450 USD/t. Se você não me der um desconto, compensa para minha fábrica importar o material da Ásia".
+* **Ação sugerida:** Pode-se simular uma queda no preço chinês mexendo no slider. Se o velocímetro mostrar que a "Janela de Importação" abriu (arbitragem positiva), há um argumento técnico fortíssimo para sentar com o fornecedor local e dizer: "O diferencial Europa-China está em 450 USD/t. Se você não me der um desconto, compensa para minha fábrica importar o material da Ásia". è a utilização do custo de importação da Ásia como um *benchmark* de preço teto.
 
 ---
 
