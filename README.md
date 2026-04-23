@@ -139,4 +139,4 @@ Focada em *"E se acontecer?"*.
 
 ---
 
-Desenvolvido por **Renato Benevenuto** *Engenheiro Civil | Especialista em Gestão de Projetos | Aspirante a Data Scientist*
+Desenvolvido por **Renato Benevenuto** *Engenheiro Civil | Especialista em Gestão de Projetos | Data Scientist*
