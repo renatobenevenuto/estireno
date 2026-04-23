@@ -38,7 +38,7 @@ Este dashboard foi desenhado para apoiar profissionais de **Suprimentos e Supply
 * **O que observar:** A medida de **Sensibilidade Dinâmica**.
 * **Ação sugerida:** Utilize o fator de repasse (ex: 15.5) para prever o impacto de variações no Petróleo Brent sobre o custo do Poliestireno. Se o Brent sobe hoje, o comprador já possui uma estimativa técnica do aumento que sofrerá em ~30 dias, permitindo um planejamento financeiro mais preciso e aviso prévio à diretoria.
 
-"Qual será o impacto do aumento do barril de ontem no meu custo de produção?"
+* "Qual será o impacto do aumento do barril de ontem no meu custo de produção?"
 
 Observar a Sensibilidade Dinâmica.
 
@@ -50,9 +50,9 @@ Como o Brent de hoje dita o preço do PS em 30 dias (Lag), isso é importante pa
 
 * "O mercado financeiro está otimista ou pessimista?"
 
-* Observar O Gráfico de Dispersão e o $R^2$.
+Observar O Gráfico de Dispersão e o $R^2$.
 
-* As ações das petroquímicas costumam reagir antes dos preços físicos. Se o $R^2$ da WLK ou LYB é alto (0.85) e as ações estão caindo há uma semana, sabe-se que a demanda por plásticos está esfriando, e isso em breve chegará ao preço do Estireno. É um sinal de alerta para não estocar material caro.
+As ações das petroquímicas costumam reagir antes dos preços físicos. Se o $R^2$ da WLK ou LYB é alto (0.85) e as ações estão caindo há uma semana, sabe-se que a demanda por plásticos está esfriando, e isso em breve chegará ao preço do Estireno. É um sinal de alerta para não estocar material caro.
 
 ### 4. Estratégia de Negociação e Arbitragem (Página 3: Simulador What-if)
 * **O que observar:** O Velocímetro de Arbitragem e o Gráfico de Composição de Preço.
