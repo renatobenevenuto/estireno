@@ -61,16 +61,16 @@ A Página 4 funciona como um **SAD (Sistema de Apoio à Decisão)** prescritivo.
 * **Slider de Frete (USD/t):** Permite ajustar o custo logístico estimado de importação da Ásia.
 * **Visual de Desembolso:** Um cartão que elimina valores nulos (COALESCE) e mostra o investimento total necessário para a carga simulada.
 
-### 3. Gráfico de Tendência (Momentum 90 dias)
+### 3. Gráfico de Tendência de 90 dias
 * **O que indica:** Um "zoom" no último trimestre. Possui uma **Linha de Constante Dinâmica** que marca a média móvel de 90 dias.
 * **Interpretação:** Se o preço real cruzar a média para baixo, confirma-se o fim da pressão de alta. O gráfico ajuda a identificar o "fundo" do mercado para compras em larga escala.
 
-### 4. Gráfico de Cascata (Waterfall de Landed Cost)
+### 4. Gráfico de Cascata de Landed Cost
 * **O que indica:** Descompõe o preço europeu partindo da China.
 * **Composição:** `Preço China` + `Custo Logístico` + `Prêmio Regional` = `Preço Europa`.
 * **Como operar:** Ao mover o slider de frete, o **Prêmio Regional** recalcula-se. Se o prêmio for alto, significa que o fornecedor europeu tem margem para dar desconto.
 
-### 5. Cards com Iconografia Delta
+### 5. Cards de KPI
 * **O que indica:** Exibe o preço atual e a variação em relação à média de 90 dias.
 * **Visual:** Utiliza ícones dinâmicos (▼/▲) e cores (Verde/Vermelho) via formatação condicional para indicar se o comprador está pagando acima ou abaixo do benchmark histórico.
 
